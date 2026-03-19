@@ -1,5 +1,7 @@
 [gd_scene format=3 uid="uid://b5j72bkfpq6oq"]
 
+[ext_resource type="Script" uid="uid://c37ig3hde1meq" path="res://Scripts/cameraControls.gd" id="1_6bp64"]
+[ext_resource type="Texture2D" uid="uid://bm17qiqavtgag" path="res://UIShadow/panel_square_screws.svg" id="1_21xkr"]
 [ext_resource type="PackedScene" uid="uid://bhkpxoheigmxu" path="res://Models/meteor_detailed.glb" id="1_jjgbg"]
 [ext_resource type="PackedScene" uid="uid://bip4giuar0f6r" path="res://Models/craft_miner.glb" id="2_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://2fkyoxtq1eiu" path="res://Models/craft_cargoB.glb" id="3_kry3j"]
@@ -8,13 +10,40 @@
 
 [node name="Main" type="Node3D" unique_id=261475186]
 
-[node name="meteor_detailed2" parent="." unique_id=1271257094 instance=ExtResource("1_jjgbg")]
+[node name="RimLightGlobal" type="DirectionalLight3D" parent="." unique_id=264214096]
+light_energy = 0.25
+
+[node name="TopLightGlobal" type="DirectionalLight3D" parent="." unique_id=1099740705]
+transform = Transform3D(-1, 6.181724e-08, -6.181724e-08, 0, 0.70710677, 0.70710677, 8.742278e-08, 0.70710677, -0.70710677, 0, 0, 0)
+light_energy = 0.5
 
 [node name="CameraTarget" type="Node3D" parent="." unique_id=1450187400]
 transform = Transform3D(0.70710677, -0.68301266, 0.18301272, 0, 0.25881907, 0.9659258, -0.70710677, -0.68301266, 0.18301272, 0, 0, 0)
+script = ExtResource("1_6bp64")
 
 [node name="Camera" type="Camera3D" parent="CameraTarget" unique_id=330141264]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 3)
+
+[node name="Background" type="Sprite3D" parent="CameraTarget" unique_id=1305689008]
+transform = Transform3D(40, 0, 0, 0, 40, 0, 0, 0, 40, 0, 0, -5)
+modulate = Color(0.116594754, 0.121448554, 0.19882712, 1)
+texture = ExtResource("1_21xkr")
+
+[node name="UI" type="Control" parent="." unique_id=1712220331]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Stardust" type="Label" parent="UI" unique_id=1615185541]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "0"
+
+[node name="meteor_detailed2" parent="." unique_id=1271257094 instance=ExtResource("1_jjgbg")]
 
 [node name="craft_miner2" parent="." unique_id=1549805933 instance=ExtResource("2_bo1nx")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 1)
