@@ -7,6 +7,7 @@
 [ext_resource type="PackedScene" uid="uid://c18s2p2gtpyvb" path="res://Models/machine_barrelLarge.glb" id="5_6bp64"]
 [ext_resource type="PackedScene" uid="uid://bvgx5rkkafjbu" path="res://Scenes/star.tscn" id="7_6bp64"]
 [ext_resource type="PackedScene" uid="uid://t8lsf7yyqulb" path="res://Scenes/stardust_extractor.tscn" id="7_344ge"]
+[ext_resource type="PackedScene" uid="uid://c1flll0p2jkok" path="res://Scenes/machine.tscn" id="8_344ge"]
 
 [node name="Main" type="Node3D" unique_id=261475186]
 
@@ -56,3 +57,6 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 2, 0.01, -1)
 
 [node name="StardustExtractor" parent="." unique_id=1406836541 instance=ExtResource("7_344ge")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.9588032)
+
+[node name="Machine" parent="." unique_id=1116744568 instance=ExtResource("8_344ge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.814283)

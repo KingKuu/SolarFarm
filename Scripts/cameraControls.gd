@@ -16,8 +16,12 @@ func _input(event: InputEvent) -> void:
 			cameraZoom = lerp(cameraZoom, cameraZoom - 0.5, 0.5)
 		cameraZoom = clampf(cameraZoom, 1, 8)
 	
-	if event is InputEventMouseMotion and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
-		var horizontal_move = -event.relative.x * _pan_sensitivity
-		var vertical_move = event.relative.y * _pan_sensitivity
-		
-		translate(Vector3(horizontal_move, vertical_move, 0))
+	if not MousePosition.dragging:
+		if event is InputEventMouseMotion and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+			MousePosition.panning = true
+			var horizontal_move = -event.relative.x * _pan_sensitivity
+			var vertical_move = event.relative.y * _pan_sensitivity
+			
+			translate(Vector3(horizontal_move, vertical_move, 0))
+	else:
+		MousePosition.panning = false

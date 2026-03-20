@@ -1,0 +1,22 @@
+[gd_scene format=3 uid="uid://c1flll0p2jkok"]
+
+[ext_resource type="Script" uid="uid://jmhkue1orc5d" path="res://Scripts/machine.gd" id="1_h612m"]
+[ext_resource type="PackedScene" uid="uid://2fkyoxtq1eiu" path="res://Models/craft_cargoB.glb" id="1_xuuum"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xuuum"]
+size = Vector3(1.6, 1, 2.6000001)
+
+[node name="Machine" type="Node3D" unique_id=1116744568]
+script = ExtResource("1_h612m")
+
+[node name="Model" parent="." unique_id=1018523001 instance=ExtResource("1_xuuum")]
+
+[node name="Draggable" type="Area3D" parent="." unique_id=765650387]
+collision_layer = 3
+collision_mask = 0
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Draggable" unique_id=1244231743]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.9604645e-08, 0.4, -2.9802322e-08)
+shape = SubResource("BoxShape3D_xuuum")
+
+[connection signal="mouse_exited" from="Draggable" to="." method="_on_draggable_mouse_exited"]
