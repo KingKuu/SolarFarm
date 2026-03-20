@@ -2,11 +2,11 @@
 
 [ext_resource type="Script" uid="uid://c37ig3hde1meq" path="res://Scripts/cameraControls.gd" id="1_6bp64"]
 [ext_resource type="Texture2D" uid="uid://bm17qiqavtgag" path="res://UIShadow/panel_square_screws.svg" id="1_21xkr"]
-[ext_resource type="PackedScene" uid="uid://bhkpxoheigmxu" path="res://Models/meteor_detailed.glb" id="1_jjgbg"]
-[ext_resource type="PackedScene" uid="uid://bip4giuar0f6r" path="res://Models/craft_miner.glb" id="2_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://2fkyoxtq1eiu" path="res://Models/craft_cargoB.glb" id="3_kry3j"]
 [ext_resource type="PackedScene" uid="uid://bnq5i3gu6hgu2" path="res://Models/platform_small.glb" id="4_21xkr"]
 [ext_resource type="PackedScene" uid="uid://c18s2p2gtpyvb" path="res://Models/machine_barrelLarge.glb" id="5_6bp64"]
+[ext_resource type="PackedScene" uid="uid://bvgx5rkkafjbu" path="res://Scenes/star.tscn" id="7_6bp64"]
+[ext_resource type="PackedScene" uid="uid://t8lsf7yyqulb" path="res://Scenes/stardust_extractor.tscn" id="7_344ge"]
 
 [node name="Main" type="Node3D" unique_id=261475186]
 
@@ -43,11 +43,6 @@ offset_right = 40.0
 offset_bottom = 23.0
 text = "0"
 
-[node name="meteor_detailed2" parent="." unique_id=1271257094 instance=ExtResource("1_jjgbg")]
-
-[node name="craft_miner2" parent="." unique_id=1549805933 instance=ExtResource("2_bo1nx")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, 0, 1)
-
 [node name="craft_cargoB2" parent="." unique_id=1018523001 instance=ExtResource("3_kry3j")]
 transform = Transform3D(0.2, -1.7881396e-08, -1.490115e-09, 1.7881396e-08, 0.2, -1.1920929e-08, 1.490116e-09, 1.1920929e-08, 0.2, 2, 0, 0)
 
@@ -56,3 +51,8 @@ transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 2, 0, -1)
 
 [node name="machine_barrelLarge2" parent="." unique_id=1538132611 instance=ExtResource("5_6bp64")]
 transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 2, 0.01, -1)
+
+[node name="Star" parent="." unique_id=2132324127 instance=ExtResource("7_6bp64")]
+
+[node name="StardustExtractor" parent="." unique_id=1406836541 instance=ExtResource("7_344ge")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.9588032)

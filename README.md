@@ -4,12 +4,12 @@
 ![Header Image or Gameplay GIF](link-to-image.png)
 
 ## 🎮 About the Game
-SolarFarm is an incremental game where you can't click to get stardust, instead you use machines and automate them to collect and deliver it for upgrades.
+SolarFarm is an incremental game where you can't click to get resources, instead you use machines to collect and process it for upgrades or currency.
 Developed within 14 days, this project focuses mostly on visuals, juice and effects.
 
 ### Key Features
-* **[Idle with a twist]:** Instead of clicking, you automate machines to do the clicking and delivery for you.
-* **[Automation]:** Set pickup and drop-off points as well as thresholds for each machine as they continuously do the grinding for you.
+* **[Idle with a twist]:** Instead of clicking, you get machines to do the gathering and processing of resources.
+* **[Automation]:** You are completely blocked from manually grinding, instead use machines to gather and process resources.
 * **[Visuals and Effects]:** This game will have an improved visual and effect quality compared to my previous projects.
 
 ---
@@ -17,7 +17,6 @@ Developed within 14 days, this project focuses mostly on visuals, juice and effe
 ## ⌨️ Controls
 | Mouse Hover | Info |
 | Left Click | Select |
-| Right Click | Deselect |
 
 ---
 

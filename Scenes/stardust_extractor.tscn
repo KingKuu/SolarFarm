@@ -1,0 +1,27 @@
+[gd_scene format=3 uid="uid://t8lsf7yyqulb"]
+
+[ext_resource type="Script" uid="uid://ckfixalo1d6vq" path="res://Scripts/stardust_extractor.gd" id="1_kddau"]
+[ext_resource type="PackedScene" uid="uid://bip4giuar0f6r" path="res://Models/craft_miner.glb" id="1_plant"]
+
+[node name="StardustExtractor" type="Node3D" unique_id=1406836541]
+script = ExtResource("1_kddau")
+
+[node name="Model" parent="." unique_id=1549805933 instance=ExtResource("1_plant")]
+transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 0, -0.040031, 0)
+
+[node name="Cooldown" type="Timer" parent="." unique_id=1750839664]
+process_callback = 0
+wait_time = 5.0
+one_shot = true
+autostart = true
+
+[node name="ExtractTime" type="Timer" parent="." unique_id=880498402]
+process_callback = 0
+wait_time = 5.0
+one_shot = true
+
+[node name="StarChecker" type="RayCast3D" parent="." unique_id=2775438]
+target_position = Vector3(0, 0, -1)
+
+[connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]
+[connection signal="timeout" from="ExtractTime" to="." method="_on_extract_time_timeout"]

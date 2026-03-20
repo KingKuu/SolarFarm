@@ -25,6 +25,10 @@ window/size/viewport_height=720
 pointing/android/enable_long_press_as_right_click=true
 pointing/emulate_touch_from_mouse=true
 
+[layer_names]
+
+3d_physics/layer_1="Sun"
+
 [physics]
 
 3d/physics_engine="Jolt Physics"
