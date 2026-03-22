@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://dgw6tquc7dty0"]
+
+[ext_resource type="Script" uid="uid://jmhkue1orc5d" path="res://Scripts/draggableComponent.gd" id="1_xby7v"]
+
+[node name="Draggable" type="Area3D" unique_id=1285347]
+script = ExtResource("1_xby7v")

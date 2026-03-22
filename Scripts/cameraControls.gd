@@ -16,8 +16,8 @@ func _input(event: InputEvent) -> void:
 			cameraZoom = lerp(cameraZoom, cameraZoom - 0.5, 0.5)
 		cameraZoom = clampf(cameraZoom, 1, 8)
 	
-	if not MousePosition.dragging:
-		if event is InputEventMouseMotion and Input.is_mouse_button_pressed(MOUSE_BUTTON_LEFT):
+	if event is InputEventMouseMotion and Input.is_action_pressed("Lclick"):
+		if not MousePosition.dragging:
 			MousePosition.panning = true
 			var horizontal_move = -event.relative.x * _pan_sensitivity
 			var vertical_move = event.relative.y * _pan_sensitivity

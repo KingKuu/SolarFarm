@@ -2,6 +2,10 @@
 
 [ext_resource type="Script" uid="uid://ckfixalo1d6vq" path="res://Scripts/stardust_extractor.gd" id="1_kddau"]
 [ext_resource type="PackedScene" uid="uid://bip4giuar0f6r" path="res://Models/craft_miner.glb" id="1_plant"]
+[ext_resource type="PackedScene" uid="uid://dgw6tquc7dty0" path="res://Components/draggable.tscn" id="3_hs7an"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_2whak"]
+radius = 0.26623127
 
 [node name="StardustExtractor" type="Node3D" unique_id=1406836541]
 script = ExtResource("1_kddau")
@@ -22,6 +26,11 @@ one_shot = true
 
 [node name="StarChecker" type="RayCast3D" parent="." unique_id=2775438]
 target_position = Vector3(0, 0, -1)
+
+[node name="Draggable" parent="." unique_id=1285347 instance=ExtResource("3_hs7an")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Draggable" unique_id=1920041690]
+shape = SubResource("SphereShape3D_2whak")
 
 [connection signal="timeout" from="Cooldown" to="." method="_on_cooldown_timeout"]
 [connection signal="timeout" from="ExtractTime" to="." method="_on_extract_time_timeout"]

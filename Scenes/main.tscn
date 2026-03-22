@@ -2,12 +2,8 @@
 
 [ext_resource type="Script" uid="uid://c37ig3hde1meq" path="res://Scripts/cameraControls.gd" id="1_6bp64"]
 [ext_resource type="Texture2D" uid="uid://bm17qiqavtgag" path="res://UIShadow/panel_square_screws.svg" id="1_21xkr"]
-[ext_resource type="PackedScene" uid="uid://2fkyoxtq1eiu" path="res://Models/craft_cargoB.glb" id="3_kry3j"]
-[ext_resource type="PackedScene" uid="uid://bnq5i3gu6hgu2" path="res://Models/platform_small.glb" id="4_21xkr"]
-[ext_resource type="PackedScene" uid="uid://c18s2p2gtpyvb" path="res://Models/machine_barrelLarge.glb" id="5_6bp64"]
 [ext_resource type="PackedScene" uid="uid://bvgx5rkkafjbu" path="res://Scenes/star.tscn" id="7_6bp64"]
 [ext_resource type="PackedScene" uid="uid://t8lsf7yyqulb" path="res://Scenes/stardust_extractor.tscn" id="7_344ge"]
-[ext_resource type="PackedScene" uid="uid://c1flll0p2jkok" path="res://Scenes/machine.tscn" id="8_344ge"]
 
 [node name="Main" type="Node3D" unique_id=261475186]
 
@@ -44,19 +40,7 @@ offset_right = 40.0
 offset_bottom = 23.0
 text = "0"
 
-[node name="craft_cargoB2" parent="." unique_id=1018523001 instance=ExtResource("3_kry3j")]
-transform = Transform3D(0.2, -1.7881396e-08, -1.490115e-09, 1.7881396e-08, 0.2, -1.1920929e-08, 1.490116e-09, 1.1920929e-08, 0.2, 2, 0, 0)
-
-[node name="platform_small2" parent="." unique_id=2052065468 instance=ExtResource("4_21xkr")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 2, 0, -1)
-
-[node name="machine_barrelLarge2" parent="." unique_id=1538132611 instance=ExtResource("5_6bp64")]
-transform = Transform3D(0.2, 0, 0, 0, 0.2, 0, 0, 0, 0.2, 2, 0.01, -1)
-
 [node name="Star" parent="." unique_id=2132324127 instance=ExtResource("7_6bp64")]
 
 [node name="StardustExtractor" parent="." unique_id=1406836541 instance=ExtResource("7_344ge")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.9588032)
-
-[node name="Machine" parent="." unique_id=1116744568 instance=ExtResource("8_344ge")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.814283)
